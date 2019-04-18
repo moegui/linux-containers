@@ -8,6 +8,8 @@ COPY docker-entrypoint.sh /usr/local/bin/
 
 COPY my.cnf /usr/etc/
 
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 3306
