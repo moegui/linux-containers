@@ -1,3 +1,3 @@
-FROM fedora:28
+FROM fedora
 
-RUN dnf install -y openssh-clients ansible && dnf clean all
+RUN dnf install -y openssh-clients ansible python3-boto3 python3-botocore && dnf clean all
