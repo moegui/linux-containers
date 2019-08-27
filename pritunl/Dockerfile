@@ -18,13 +18,13 @@ ARG MDB=pritunl
 
 RUN echo -e "\
 { \n\
-  "debug": false, \n\
-  "bind_addr": "0.0.0.0", \n\
-  "port": $PPORT, \n\
-  "log_path": "/var/log/pritunl.log", \n\
-  "temp_path": "/tmp/pritunl_%r", \n\
-  "local_address_interface": "auto", \n\
-  "mongodb_uri": "mongodb://$MHOST:$MPORT/$MDB" \n\
+  \"debug\": false, \n\
+  \"bind_addr\": \"0.0.0.0\", \n\
+  \"port\": $PPORT, \n\
+  \"log_path\": \"/var/log/pritunl.log\", \n\
+  \"temp_path\": \"/tmp/pritunl_%r\", \n\
+  \"local_address_interface\": \"auto\", \n\
+  \"mongodb_uri\": \"mongodb://$MHOST:$MPORT/$MDB\" \n\
 } \
 " > /etc/pritunl.conf
 
