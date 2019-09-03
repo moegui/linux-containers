@@ -12,7 +12,7 @@ RUN yum -y install epel-release && \
     yum -y install pritunl && yum clean all
 
 ARG PPORT=8443
-ARG MHOST=pritunl_mongodb
+ARG MHOST=mongodb
 ARG MPORT=27017
 ARG MDB=pritunl
 
@@ -20,7 +20,7 @@ RUN echo -e "\
 { \n\
   \"debug\": false, \n\
   \"bind_addr\": \"0.0.0.0\", \n\
-  \"port\": $PPORT, \n\
+  \"port\": \"$PPORT\", \n\
   \"log_path\": \"/var/log/pritunl.log\", \n\
   \"temp_path\": \"/tmp/pritunl_%r\", \n\
   \"local_address_interface\": \"auto\", \n\
